@@ -23,12 +23,12 @@ If the user invokes the command by typing `r!run target @Henry#6174`, user will 
 @Henry6174's user ID.
 
 Otherwise, there are many other variables which will be defined as follows:
-###Command Specific:
+### Command Specific:
 - author : The ID of the author of the message (an integer)
 - channel : The ID of the channel of the message
 - content : The original content of the message
 
-###Functions:
+### Functions:
 - if : The if function is used to simulate an if statement:
        There are three arguments: the condition, the True value, and the False value
        For example: `val = if(num == 5, "Five", "Not five")`
@@ -49,7 +49,7 @@ Otherwise, there are many other variables which will be defined as follows:
 - end : End the command without executing the rest, responding with a message.
         For example: `end("Cannot attack! You are not targeting anyone!")`
 
-##Other things:
+### Other things:
 - Math stuff available : sin(), cos(), tan(), asin(), acos(), atan(), atan2(), pi
 - Random : rand(), returns a number between 0 (inclusive) and 1 (exclusive)
 - Type conversions : int(), float(), str()
