@@ -1,0 +1,27 @@
+{
+    "commands": {
+        "303307934774067210": {
+            "target": [
+                [
+                    "targeted"
+                ],
+                "targetmember = getmember(targeted)\nsetdata(author, \"targeting\", targetmember)\nreply(\"Now targeting \" + (name(targetmember)))"
+            ],
+            "attack": [
+                [
+                    "type",
+                    "amount"
+                ],
+                "damage = if(type == \"d\", int(amount), int(rand() * (int(amount)))) \n\ntarget = getdata(author, \"targeting\", None)\nif(target == None, end, nil)(\"You aren't targeting anyone!\")\nhealth = getdata(target, \"health\", 30)\nreply(name(target) + \" took \" + (str(damage)) + \" damage.\")\ndamage = if(damage > health, health, damage)\nsetdata(target, \"health\", health - damage)\n\nif(health == damage, reply, nil)(name(target) + \" has died!\")"
+            ]
+        }
+    },
+    "data": {
+        "303307934774067210": {
+            "122739797646245899": {
+                "targeting": 122739797646245899,
+                "health": 100
+            }
+        }
+    }
+}
